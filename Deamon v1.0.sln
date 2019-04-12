@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp16", "ConsoleApp16\ConsoleApp16.csproj", "{D7A625B7-001F-4C9D-96C8-E541B1EE36D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deamon", "C:\Users\17440\source\repos\Deamon v1.0\Deamon\Deamon.csproj", "{9BAE66C6-F165-4447-8958-134E5B59CEB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D7A625B7-001F-4C9D-96C8-E541B1EE36D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7A625B7-001F-4C9D-96C8-E541B1EE36D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7A625B7-001F-4C9D-96C8-E541B1EE36D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7A625B7-001F-4C9D-96C8-E541B1EE36D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BAE66C6-F165-4447-8958-134E5B59CEB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BAE66C6-F165-4447-8958-134E5B59CEB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BAE66C6-F165-4447-8958-134E5B59CEB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BAE66C6-F165-4447-8958-134E5B59CEB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8585AC9E-0AEE-41B1-BB92-5ADA6C39B5F4}
+		SolutionGuid = {4ACA9CDB-69E0-4F3B-8854-9B2F56750CB8}
 	EndGlobalSection
 EndGlobal
