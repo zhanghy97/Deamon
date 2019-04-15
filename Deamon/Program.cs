@@ -110,13 +110,14 @@ namespace Deamon
 
             string key = configuration1["Key"];
             string url = configuration1["Ip:Port"];
+            string userId = configuration1["UserId"];
 
             var values = new NameValueCollection {
-                    { "userid", ""},
+                    { "userid", userId},
                     { "password", ""},
                     { "SendTo", email },
                     { "WebSubject", "提醒" },
-                    { "Body", pathName+"进程已关闭"},
+                    { "Body", pathName+"进程已关闭，程序关闭时间："+DateTime.Now.ToLocalTime().ToString()},
                     { "hz","0"},
                     { "MailSMS","1"},
                     { "__Click",key}

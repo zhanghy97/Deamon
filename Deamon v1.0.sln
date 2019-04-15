@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deamon", "C:\Users\17440\source\repos\Deamon v1.0\Deamon\Deamon.csproj", "{9BAE66C6-F165-4447-8958-134E5B59CEB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deamon", "C:\Users\17440\Desktop\进程监控程序\Deamon v1.0\Deamon\Deamon.csproj", "{9BAE66C6-F165-4447-8958-134E5B59CEB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
