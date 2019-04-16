@@ -32,8 +32,7 @@ namespace Deamon
                     var buffer = Encoding.ASCII.GetBytes(boundary + Environment.NewLine);
                     requestStream.Write(buffer, 0, buffer.Length);
                     buffer =
-                        Encoding.ASCII.GetBytes(string.Format("Content-Disposition: form-data; name=\"{0}\"{1}{1}", name,
-                            Environment.NewLine));
+                        Encoding.ASCII.GetBytes(string.Format("Content-Disposition: form-data; name=\"{0}\"{1}{1}", name,Environment.NewLine));
                     requestStream.Write(buffer, 0, buffer.Length);
                     buffer = Encoding.GetEncoding("GB2312").GetBytes(values[name] + Environment.NewLine);
                     requestStream.Write(buffer, 0, buffer.Length);

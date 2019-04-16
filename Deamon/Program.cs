@@ -40,13 +40,13 @@ namespace Deamon
 
             string[] pathList = Regex.Split(configuration["Path"], ",", RegexOptions.IgnoreCase);
 
-            string[] emailList = Regex.Split(configuration["Email"], ",", RegexOptions.IgnoreCase);
+            string[] phonelist = Regex.Split(configuration["PhoneNumber"], ",", RegexOptions.IgnoreCase);
 
             string logPath = configuration["LogPath"];
 
             while (true)
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(5000);
                 //获取所有进程内的进程名并加入列表
                 Process[] ps = Process.GetProcesses();
                 var pcNameList = new List<string>();
@@ -64,8 +64,8 @@ namespace Deamon
                     }
                     else
                     {
-                        foreach (string email in emailList) {
-                            sendmail(b[1],email);
+                        foreach (string phone in phonelist) {
+                            Sendsms(b[1], phone);
                         }
                         string path = logPath;
                         FileStream fs = new FileStream(path, FileMode.Append);
@@ -102,30 +102,23 @@ namespace Deamon
                 }
             }
         }
-        public static void sendmail(string pathName,string email)
+        public static void Sendsms(string nr, string phonelist)
         {
             var builder1 = new ConfigurationBuilder().AddJsonFile("appsettings.json");
-            var configuration1 = builder1.Build();            
+            var configuration1 = builder1.Build();
 
 
             string key = configuration1["Key"];
             string url = configuration1["Ip:Port"];
-            string userId = configuration1["UserId"];
-
-            var values = new NameValueCollection {
-                    { "userid", userId},
-                    { "password", ""},
-                    { "SendTo", email },
-                    { "WebSubject", "提醒" },
-                    { "Body", pathName+"进程已关闭，程序关闭时间："+DateTime.Now.ToLocalTime().ToString()},
-                    { "hz","0"},
-                    { "MailSMS","1"},
-                    { "__Click",key}
-                    };
+            var values = new NameValueCollection
+            {
+                { "phonelist", phonelist },
+                { "content", nr+"进程意外关闭！关闭时间：" +DateTime.Now.ToLocalTime().ToString()},
+                { "__Click",key}
+            };
 
             new OA().WPostGB2312(url, values);
 
-            
         }
     }
 }
